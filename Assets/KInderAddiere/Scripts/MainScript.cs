@@ -11,13 +11,7 @@ public class MainScript : MonoBehaviour
 
     [SerializeField] private InputField inputFieldval1, inputFieldval2;
     [SerializeField] private Text txtResult;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-
-
-    }
 
 
     public int CheckAddition(int summandA, int summandB)
@@ -25,8 +19,6 @@ public class MainScript : MonoBehaviour
         int result = 0;
 
         result = summandA + summandB;
-        //Debug.Log(summandA + summandB);
-        //Debug.Log(result);
         txtResult.text = string.Format("{0}", result);
         return result;
     }
@@ -36,7 +28,8 @@ public class MainScript : MonoBehaviour
         string val1, val2;
         val1 = inputFieldval1.text;
         val2 = inputFieldval2.text;
-        int summandA = -1, summandB = -1;
+
+        int summandA=0, summandB=0;
         try
         {
             summandA = int.Parse(val1);
@@ -46,7 +39,7 @@ public class MainScript : MonoBehaviour
             Debug.Log("Bruh");
             inputFieldval1.GetComponent<InputField>().image.color = Color.red;
             inputFieldval1.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "Bitte gültige Zahl eingeben.";
-            inputFieldval2.text = "";
+            inputFieldval1.text = "";
 
         }
         try
@@ -61,20 +54,26 @@ public class MainScript : MonoBehaviour
             inputFieldval2.text = "";
 
         }
-
-
         txtResult.text = CheckAddition(summandA, summandB).ToString();
-
-        if (summandA + summandB < summandA)
+       
+        try
         {
-            txtResult.text = "Kein Ergebnis.";
-            
+            summandA = int.Parse(val1);
         }
-
-        if (summandA + summandB < summandB)
+        catch
         {
             txtResult.text = "Kein Ergebnis.";
         }
+        try
+        {
+            summandB = int.Parse(val2);
+        }
+        catch
+        {
+            txtResult.text = "Kein Ergebnis.";
+        }
+
+
     }
 
     public void ResetButton()
@@ -83,10 +82,5 @@ public class MainScript : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
 }
