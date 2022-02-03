@@ -12,4 +12,7 @@ WebGL Referenzauflösung (960x600)
 
 ### Visueller Einblick in das Projekt:
 ![image](https://user-images.githubusercontent.com/90834343/152334614-0e04494c-73ea-4863-bdab-4b0a9454217b.png)
+Notwendiges für die Ausführung: Für den Export in WebGL muss das Modul WebGL in Unity installiert sein.
 
+###Gewonnene Erkentnisse:
+Vertiefung in C# ,Parsel ,catch/try , Instant Variablen, Wiederholung, Vertiefung, Anfang den Stoff wirklich zu verstehen und anwenden, Git.
