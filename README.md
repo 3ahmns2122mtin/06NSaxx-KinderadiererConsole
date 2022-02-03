@@ -2,7 +2,7 @@
 Veröffentlicht:
 
 ### Projektbeschreibung:
-Hier ist ein einfacher vorzufinden der von NSaxx in Unety erstellt wurde.
+Hier ist ein einfacher Addierer vorzufinden der  von NSaxx erstellt wurde.
 
 ### Entwicklungsplatformen:
 (Windows 10 , Unity 2020.3.18f1, Visual Studios 2020) 
